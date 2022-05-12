@@ -11,10 +11,6 @@ RUN /opt/conda/bin/conda install -y nodejs opencv Cython tensorflow pandas sciki
     /opt/conda/bin/conda install -c conda-forge tensorboardx && \
     /opt/conda/bin/conda clean -ya
 
-RUN jupyter labextension install jupyterlab_tensorboard
-
-RUN pip install jupyter_tensorboard torchvision scikit-image
-
 RUN mkdir -p /home/me && chmod 1777 /home/me
 
 ENV HOME /home/me
